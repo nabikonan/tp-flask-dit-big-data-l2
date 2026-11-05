@@ -1,0 +1,19 @@
+{# ÉTAPE 13 – Liste des étudiants
+
+   Instructions :
+   1. Reprendre la structure complète d'une page (doctype, head avec le CSS,
+      header avec la navigation, main, footer, script JS) comme dans
+      index.html. On duplique volontairement ce code : c'est ce que
+      l'héritage de templates viendra simplifier plus tard.
+   2. Afficher les messages flash dans <main> avec
+      get_flashed_messages(with_categories=true).
+   3. Ajouter un bouton « Nouvel étudiant » qui pointe vers la route `creer`.
+   4. Parcourir la variable `etudiants` avec {% for %} et afficher un tableau
+      (nom, prénom, email, date de naissance).
+   5. Si la liste est vide ({% else %} du for), afficher un message.
+   6. Pour chaque ligne, ajouter :
+      - un lien « Voir » (route `detail`)
+      - un lien « Modifier » (route `modifier`)
+      - un petit <form method="post"> avec un bouton « Supprimer »
+        (route `supprimer`) ; demander une confirmation en JavaScript.
+#}

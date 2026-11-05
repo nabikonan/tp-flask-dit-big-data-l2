@@ -1,0 +1,51 @@
+<!--
+{# ÉTAPE 15 – Formulaire partagé création / modification
+
+   Instructions :
+   1. Reprendre la structure complète d'une page (doctype, head avec le CSS,
+      header avec la navigation, main, footer, script JS).
+   2. Créer un <form method="post"> sans attribut action (il poste vers l'URL
+      courante).
+   3. Ajouter les champs : nom, prénom (text), email (email),
+      date_naissance (date), chacun avec son <label> et l'attribut name
+      correspondant à ce que lit la route (request.form).
+   4. Pré-remplir chaque champ avec la valeur de `etudiant` quand elle existe
+      (attribut value) : en création `etudiant` n'est pas défini.
+   5. Adapter le titre et le texte du bouton selon qu'il s'agit d'une création
+      ou d'une modification.
+   6. Ajouter un lien « Annuler » vers la liste.
+#}-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nouveau</title>
+</head>
+<body>
+   <form action="/etudiants/nouveau" method="POST">
+      <div>
+         <label for="">Nom</label>
+         <input type="text" name="nom" id="" placeholder="Email">
+      </div>
+      <div>
+         <label for="">Prenom</label>
+         <input type="text" name="prenom">
+      </div>
+      <div>
+         <label for="">Email</label>
+         <input type="email" name="email">
+      </div>
+      <div>
+         <label for="">Date de naissance</label>
+         <input type="date" name="date_naissance">
+      </div>
+      <div>
+         <button>Enregistrer</button>
+      </div>
+
+   </form>
+</body>
+</html>
